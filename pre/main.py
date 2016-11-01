@@ -3,7 +3,7 @@ import argparse
 from seq import seq
 
 # call different method depends on op
-def main(op, file_dir, helper_file, target_dir, num_channel=1, redo=False,
+def main(op, file_dir, target_dir, num_channel=1, redo=False,
         origin_size=32, out_size=32):
     s = seq()
 
