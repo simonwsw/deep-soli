@@ -1,0 +1,22 @@
+# Mac
+.DS_Store
+
+# Matlab
+*.m~
+*.asv
+
+# Vim
+*~
+
+# Python binary
+*.pyc
+
+# Temp dir
+tmp
+
+# Build and CMake
+build
+
+# openFrameworks
+bin
+obj
