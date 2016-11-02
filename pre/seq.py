@@ -2,9 +2,9 @@ import os, re
 import numpy as np
 import h5py
 
-from flow import flow
+from op import Operation
 
-class seq:
+class Seq:
     def __init__(self):
         pass
 
@@ -24,26 +24,26 @@ class seq:
     def generate_image(self, file_dir, target_dir, num_channel,
             origin_size, out_size, redo):
         source_files = self.get_h5(file_dir)
-        f = flow()
+        o = Operation()
         for s in source_files:
             t = os.path.join(target_dir, re.sub('.h5', '',
                 os.path.basename(s)))
             if redo or not os.path.exists(t):
                 print 'Generating', s
-                f.generate_flow(s, t, num_channel, origin_size, out_size)
+                o.generate_image(s, t, num_channel, origin_size, out_size)
 
     # clean flow
     def clean_image(self, file_dir):
         file_dirs = self.get_dir(file_dir)
-        f = flow()
+        o = Operation()
         for d in file_dirs:
-            f.clean_flow(d)
+            o.clean_image(d)
 
     # generate mean
     def generate_mean(self, file_dir, target, num_channel, out_size):
-        f = flow()
-        f.setup_mean(num_channel, out_size)
+        o = Operation()
+        o.setup_mean(num_channel, out_size)
         source_dir = self.get_dir(file_dir)
         for s in source_dir:
-            f.accum_mean(s, num_channel, out_size)
-        f.save_mean(target, num_channel)
+            o.accum_mean(s, num_channel, out_size)
+        o.save_mean(target, num_channel)

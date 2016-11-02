@@ -5,13 +5,13 @@ import json
 
 from image import image
 
-class flow:
+class Operation:
     def __init__(self):
         pass
 
-    # generate flow for each sequence
-    def generate_flow(self, source, target, num_channel, origin_size=32,
-            out_size=32, bound=15.0, bin_image='image/bin/flow'):
+    # generate image for each sequence
+    def generate_image(self, source, target, num_channel, origin_size=32,
+            out_size=32, bound=15.0, bin_image='image/bin/image'):
         if not os.path.exists(target): os.makedirs(target)
         # run flow command
         p = subprocess.Popen([bin_image,
@@ -35,7 +35,7 @@ class flow:
             json.dump(labels_dict, jf)
 
     # delete generated image files
-    def clean_flow(self, file_dir, label_file='label.json'):
+    def clean_image(self, file_dir, label_file='label.json'):
         print 'Cleaning', file_dir
         # delete images in dir
         image_files = [os.path.join(file_dir, f)
