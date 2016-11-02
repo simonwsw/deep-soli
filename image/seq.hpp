@@ -40,7 +40,7 @@ public:
 	void float2Image(const cv::Mat &floatMat, cv::Mat &imageMat,
 		double lBound, double uBound);
 	cv::Mat loadOrigin(float *image, int originHeight, int originWidth,
-		int flowHeight, int flowWidth);
+		int outHeight, int outWidth);
 
 	void flow(int whichCh, int originHeight, int originWidth,
 		int outHeight, int outWidth, double bound);
