@@ -32,7 +32,7 @@ class Seq:
                 print 'Generating', s
                 o.generate_image(s, t, num_channel, origin_size, out_size)
 
-    # clean flow
+    # clean image
     def clean_image(self, file_dir):
         file_dirs = self.get_dir(file_dir)
         o = Operation()
