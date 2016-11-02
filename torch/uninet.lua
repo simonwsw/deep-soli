@@ -1,7 +1,7 @@
 require 'class'
 require 'rnn'
 
-require 'torch.net'
+require 'net.net'
 
 local UniNet = torch.class('UniNet', 'Net')
 
