@@ -16,11 +16,11 @@ LDFLAGS_CV=-L/usr/local/cuda-7.5/lib64 `pkg-config --libs opencv`
 BIN=bin
 SOURCES=$(wildcard *.cpp)
 OBJECTS=$(patsubst %.cpp, %.o, $(SOURCES))
-EXECUTABLE=$(BIN)/flow
+EXECUTABLE=$(BIN)/image
 
 all: $(SOURCES) $(EXECUTABLE)
 
-$(BIN)/flow: $(BIN)/main.o $(BIN)/h5Data.o $(BIN)/seq.o
+$(BIN)/image: $(BIN)/main.o $(BIN)/h5Data.o $(BIN)/seq.o
 	$(CC) $(BIN)/main.o $(BIN)/h5Data.o $(BIN)/seq.o \
 	$(LDFLAGS_BOOST) $(LDFLAGS_H5) $(LDFLAGS_CV) -o $@
 
