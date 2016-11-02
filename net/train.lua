@@ -43,6 +43,6 @@ end
 
 function Train:train(batchSize, maxSeq)
   -- evaluate by epoch
-  self:epochEval(batchSize, maxSeq, logFile)
+  self:epochEval(batchSize, maxSeq)
   print('Finished')
 end

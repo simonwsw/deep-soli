@@ -14,7 +14,7 @@ function ImageSeq:__init(seqName, mean, dataSize, dataCh, ch, useCuda)
   -- load frame depends on image type, lib image support only float tensor
   -- reset tensor type back to float tensor when using cuda
   torch.setdefaulttensortype('torch.FloatTensor')
-  self.imageFrame = self:loadFrame('image')
+  self.imageFrame = self:loadFrame()
   -- set tensor type back to cuda tensor when using cuda
   if self.useCuda then
     torch.setdefaulttensortype('torch.CudaTensor')
@@ -37,7 +37,7 @@ function ImageSeq:getSeqInfo()
   return seqInfo
 end
 
-function ImageSeq:loadFrame(imageType)
+function ImageSeq:loadFrame()
   local frame = {}
   local m = self.mean[string.format('ch%d_image', self.ch)]
     :permute(3, 2, 1) -- the matlab order is reversed
