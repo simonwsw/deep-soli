@@ -28,8 +28,8 @@ This project uses Google's [Project Soli](atap.google.com/soli) sensor.
 
 Our paper uses a light-weight end-to-end trained Convolutional Neural Networks
 and Recurrent Neural Networks architecture, recognizes 11 in-air gestures
-with 87% accuracy, and can perform realtime predictions at 140Hz on commodity
-hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
+with 87% per-frame accuracy, and can perform realtime predictions at 140Hz
+on commodity hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
 
 ## Pre-request
 
@@ -43,10 +43,13 @@ hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
 
 ## Quick start
 
-## Dataset, model and other files
+- Preprocessing (HDF5 to images)...
+- Preprocessing (generate mean file)...
+- Evaluate...
+
+## Dataset and model
 
 - Project Soli gesture sequence dataset: ...
-- Mean file across all the sequences: ...
 - Trained proposed model: ...
 
 ## Comments on the code base
@@ -59,4 +62,4 @@ The model detail can be found both in the paper and the model file.
 
 ## License
 
-This project is licensed under the terms of the MIT license. 
+This project is licensed under the terms of the MIT license.
