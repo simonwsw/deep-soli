@@ -47,9 +47,19 @@ on commodity hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
 - Preprocessing (generate mean file)...
 - Evaluate...
 
-## Dataset and model
+## Dataset
 
 - Project Soli gesture sequence dataset: ...
+- The gestures are listed in the table below. Each column represents
+  one gesture and we snapshot three important steps for each gestures.
+  The gesture label is indicated by the number in the circle above. Please
+  notice that the gesture label order is different than the paper, as
+  we regroup gestures in the paper.
+
+![gesture](http://bit.ly/2fHcMRX)
+
+## Pre-trained model
+
 - Trained proposed model: ...
 
 ## Comments on the code base
