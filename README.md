@@ -2,6 +2,11 @@
 
 Gesture Recognition Using Neural Networks with Google's Project Soli Sensor
 
+## Update
+
+I'm still preparing the dataset and trained model, please come back in one
+or two weeks. Thanks! :-)
+
 ## Introduction
 
 This is the open source evaluation code base of our paper:
