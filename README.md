@@ -4,8 +4,7 @@ Gesture Recognition Using Neural Networks with Google's Project Soli Sensor
 
 ## Update
 
-I'm still preparing the dataset and trained model, please come back in one
-or two weeks. Thanks! :-)
+Dataset and trained model available.
 
 ## Introduction
 
@@ -54,6 +53,7 @@ on commodity hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
 
 ## Dataset
 
+- [Download dataset](https://polybox.ethz.ch/index.php/s/wG93iTUdvRU8EaT)
 - Project Soli gesture sequence dataset: ...
 - The gestures are listed in the table below. Each column represents
   one gesture and we snapshot three important steps for each gestures.
@@ -65,6 +65,7 @@ on commodity hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
 
 ## Pre-trained model
 
+- [Download model](https://polybox.ethz.ch/index.php/s/0SEdZqkn433dbEh)
 - Trained proposed model: ...
 
 ## Comments on the code base
