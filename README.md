@@ -47,13 +47,33 @@ on commodity hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
 
 ## Quick start
 
-- Preprocessing (HDF5 to images): ``
-- Preprocessing (generate mean file): ``
-- Load model and evaluate: ``
+- Preprocessing (HDF5 to images):
+
+```
+python pre/main.py --op image --file [dataset folder]
+--target [target image folder] --channel 4 --originsize 32 --outsize 32
+```
+
+- Preprocessing (generate mean file):
+
+```
+python pre/main.py --op mean --file [image folder]
+--target [mean file name] --channel 4 --outsize 32
+```
+
+- Load model and evaluate:
+
+```
+th net/main.lua --file [image folder] --list [train/test sequence split file]
+--load [model file] --inputsize 32 --inputch 4 --label 11 --datasize 32
+--datach 3 --batch 16 --maxseq 40 --cuda --cudnn
+```
 
 ## Dataset
 
 - Download [dataset](https://polybox.ethz.ch/index.php/s/wG93iTUdvRU8EaT)
+- Train/test split file (in JSON format) we used is stored in the repo
+  `config/file_half.json`.
 - The dataset contains multiple preprocessed Range-Doppler Image sequences.
   Each sequence is saved as a single HDF5 format data file. File names are
   defined as `[gesture ID]_[session ID]_[instance ID].h5`. Range-Doppler Image
@@ -61,16 +81,18 @@ on commodity hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
   Label can be accessed by dataset name `label`. Range-Doppler Image
   data array has shape of `[number of frame] * 1024` (can be reshape back to 2D Range-Doppler Image to `32 * 32`)
 - Simple Python code to access the data:
-  ```python
-  # Demo code to extract data in python
-  import h5py
 
-  use_channel = 0
-  with h5py.File(file_name, 'r') as f:
-      # Data and label are numpy arrays
-      data = f['ch{}'.format(use_channel)][()]
-      label = f['label'][()]
-  ```
+```python
+# Demo code to extract data in python
+import h5py
+
+use_channel = 0
+with h5py.File(file_name, 'r') as f:
+    # Data and label are numpy arrays
+    data = f['ch{}'.format(use_channel)][()]
+    label = f['label'][()]
+```
+
 - Please refer to the paper for the gesture collecting
   campaign details.
 - The gestures are listed in the table below. Each column represents
