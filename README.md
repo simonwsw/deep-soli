@@ -4,7 +4,7 @@ Gesture Recognition Using Neural Networks with Google's Project Soli Sensor
 
 ## Update
 
-Dataset and trained model available.
+Dataset and trained model are now available.
 
 ## Introduction
 
@@ -47,14 +47,32 @@ on commodity hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
 
 ## Quick start
 
-- Preprocessing (HDF5 to images)...
-- Preprocessing (generate mean file)...
-- Evaluate...
+- Preprocessing (HDF5 to images): ``
+- Preprocessing (generate mean file): ``
+- Load model and evaluate: ``
 
 ## Dataset
 
-- [Download dataset](https://polybox.ethz.ch/index.php/s/wG93iTUdvRU8EaT)
-- Project Soli gesture sequence dataset: ...
+- Download [dataset](https://polybox.ethz.ch/index.php/s/wG93iTUdvRU8EaT)
+- The dataset contains multiple preprocessed Range-Doppler Image sequences.
+  Each sequence is saved as a single HDF5 format data file. File names are
+  defined as `[gesture ID]_[session ID]_[instance ID].h5`. Range-Doppler Image
+  data of a specific channel can be accessed by dataset name `ch[channel ID]`.
+  Label can be accessed by dataset name `label`. Range-Doppler Image
+  data array has shape of `[number of frame] * 1024` (can be reshape back to 2D Range-Doppler Image to `32 * 32`)
+- Simple Python code to access the data:
+  ```python
+  # Demo code to extract data in python
+  import h5py
+
+  use_channel = 0
+  with h5py.File(file_name, 'r') as f:
+      # Data and label are numpy arrays
+      data = f['ch{}'.format(use_channel)][()]
+      label = f['label'][()]
+  ```
+- Please refer to the paper for the gesture collecting
+  campaign details.
 - The gestures are listed in the table below. Each column represents
   one gesture and we snapshot three important steps for each gestures.
   The gesture label is indicated by the number in the circle above. Please
@@ -66,7 +84,13 @@ on commodity hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
 ## Pre-trained model
 
 - [Download model](https://polybox.ethz.ch/index.php/s/0SEdZqkn433dbEh)
-- Trained proposed model: ...
+- Trained proposed model, please refer to the paper for model detail.
+- Simple Lua (Torch 7) code to load the model:
+  ```lua
+  loadFile = 'uni_image_np_50.t7'
+  net = torch.load(loadFile)
+  print(net)
+  ```
 
 ## Comments on the code base
 
