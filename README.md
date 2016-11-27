@@ -105,7 +105,7 @@ with h5py.File(file_name, 'r') as f:
 
 ## Pre-trained model
 
-- [Download model](https://polybox.ethz.ch/index.php/s/0SEdZqkn433dbEh)
+- Download [model](https://polybox.ethz.ch/index.php/s/0SEdZqkn433dbEh)
 - Trained proposed model, please refer to the paper for model detail.
 - Simple Lua (Torch 7) code to load the model:
 
