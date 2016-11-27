@@ -86,11 +86,13 @@ on commodity hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
 - [Download model](https://polybox.ethz.ch/index.php/s/0SEdZqkn433dbEh)
 - Trained proposed model, please refer to the paper for model detail.
 - Simple Lua (Torch 7) code to load the model:
-  ```bash
-  loadFile = 'uni_image_np_50.t7'
-  net = torch.load(loadFile)
-  print(net)
-  ```
+
+```
+loadFile = 'uni_image_np_50.t7'
+net = torch.load(loadFile)
+print(net)
+```
+
 - The model uses layers support `cudnn`.
 
 ## Comments on the code base
