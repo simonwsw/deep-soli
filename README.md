@@ -91,6 +91,7 @@ on commodity hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
   net = torch.load(loadFile)
   print(net)
   ```
+- The model uses layers support `cudnn`.
 
 ## Comments on the code base
 
