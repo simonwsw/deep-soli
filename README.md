@@ -72,6 +72,7 @@ th net/main.lua --file [image folder] --list [train/test sequence split file]
 ## Dataset
 
 - Download [dataset](https://polybox.ethz.ch/index.php/s/wG93iTUdvRU8EaT)
+  (please let me know when the link doesn't work).
 - Train/test split file (in JSON format) we used is stored in the repo
   `config/file_half.json`.
 - The dataset contains multiple preprocessed Range-Doppler Image sequences.
