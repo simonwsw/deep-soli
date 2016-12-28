@@ -94,13 +94,22 @@ with h5py.File(file_name, 'r') as f:
     label = f['label'][()]
 ```
 
-- Please refer to the paper for the gesture collecting
-  campaign details.
+- Dataset session arrangement for evaluation.
+  - 11 (gestures) * 25 (instances) * 10 (users) for cross user evaluation:
+    session 2 (25), 3 (25), 5 (25), 6 (25), 8 (25), 9 (25), 10 (25), 11 (25),
+    12 (25), 13 (25).
+  - 11 (gestures) * (50 (instances) * 4 (sessions) +
+    25 (instances) * 2 (sessions)) for single user
+    cross session evaluation: session 0 (50), 1 (50), 4 (50), 7 (50),
+    13 (25), 14 (25).
+  - Please refer to the paper for the gesture collecting
+    campaign details.
 - The gestures are listed in the table below. Each column represents
   one gesture and we snapshot three important steps for each gestures.
   The gesture label is indicated by the number in the circle above. Please
   notice that the gesture label order is different than the paper, as
-  we regroup gestures in the paper.
+  we regroup gestures in the paper. Sequences with gesture ID 11 are
+  background signals with no presence of hand.
 
 ![gesture](http://bit.ly/2fHcMRX)
 
