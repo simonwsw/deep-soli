@@ -28,7 +28,7 @@ This project uses Google's [Project Soli](atap.google.com/soli) sensor.
 > reflected signal, such as energy, time delay, and frequency shift
 > capture rich information about the object’s characteristics and
 > dynamics, including size, shape, orientation, material, distance,
-> and velocity.
+> and .
 
 Our paper uses a light-weight end-to-end trained Convolutional Neural Networks
 and Recurrent Neural Networks architecture, recognizes 11 in-air gestures
