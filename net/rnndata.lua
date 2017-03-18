@@ -38,7 +38,6 @@ function RnnData:loadBatch(batchNum, batchSize, maxSeq)
     local seq
     seq = ImageSeq(self.seqList[batchStart + b], self.mean,
       self.dataSize, self.dataCh, self.ch, self.useCuda)
-    end
     -- generate frame sequence
     local frames = self:frameSeq(seq, maxSeq)
     for i, v in pairs(frames) do
