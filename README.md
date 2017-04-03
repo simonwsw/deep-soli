@@ -65,7 +65,7 @@ python pre/main.py --op mean --file [image folder]
 
 ```
 th net/main.lua --file [image folder] --list [train/test sequence split file]
---load [model file] --inputsize 32 --inputch 4 --label 11--datasize 32
+--load [model file] --inputsize 32 --inputch 4 --label 13 --datasize 32
 --datach 3 --batch 16 --maxseq 40 --cuda --cudnn
 ```
 
