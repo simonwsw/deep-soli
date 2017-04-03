@@ -40,6 +40,6 @@ require 'net.rnntrain'
 trainObject = RnnTrain(opt.file, opt.list, meanFile,
   opt.inputsize, opt.inputch, opt.label,
   opt.datasize, opt.datach, ch,
-  opt.load, opt.rho, opt.cuda, opt.cudnn)
+  opt.load, opt.cuda, opt.cudnn)
 
 trainObject:train(opt.batch, opt.maxseq)
