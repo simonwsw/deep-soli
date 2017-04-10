@@ -15,6 +15,9 @@ in the Radio-Frequency Spectrum** <br />
 Saiwen Wang, Jie Song, Jamie Lien, Poupyrev Ivan, Otmar Hilliges <br />
 (link to the [paper](http://bit.ly/2ftSRcn))
 
+Please cite the paper if you find the code useful. Thank you.
+([BibTex](https://github.com/simonwsw/deep-soli/blob/master/cite.bib))
+
 This project uses Google's [Project Soli](atap.google.com/soli) sensor.
 
 > Soli is a new sensing technology that uses miniature radar to
