@@ -50,6 +50,14 @@ on commodity hardware. (link to the [paper video](http://bit.ly/2fDd9iJ))
 
 ## Quick start
 
+- Make image binary
+
+```
+cd image
+mkdir bin
+make
+```
+
 - Preprocessing (HDF5 to images):
 
 ```
